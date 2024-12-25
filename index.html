@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Navidad Devs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1e1e2f, #3c3c6b);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+        .container {
+            text-align: center;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out 1.5s forwards;
+        }
+        h1 {
+            font-size: 4rem;
+            margin: 0;
+            background: linear-gradient(90deg, #f39c12, #f1c40f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .message {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 30px;
+        }
+        .icon img {
+            width: 100px;
+            height: 100px;
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+        }
+        .icon img:hover {
+            transform: scale(1.2);
+            box-shadow: 0 0 15px #f1c40f;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: white;
+            font-size: 1.5rem;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        const snowflakes = 70;
+        for (let i = 0; i < snowflakes; i++) {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            snowflake.style.fontSize = (Math.random() * 1 + 1.5) + 'rem';
+            document.body.appendChild(snowflake);
+        }
+    </script>
+    <div class="container">
+        <h1>⛄ Feliz Navidad Devs! ⛄</h1>
+        <p class="message">Que tus compilaciones no fallen y tus merges sean pacíficos.</p>
+        <div class="icons">
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="Git Navideño" title="Git de Navidad">
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919851.png" alt="React Navideño" title="React de Navidad">
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919825.png" alt="Node.js Navideño" title="Node.js de Navidad">
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/6132/6132221.png" alt="C# Navideño" title="C# Festivo">
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919836.png" alt="ASP Navideño" title="ASP de Navidad">
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919830.png" alt="PHP Navideño" title="PHP Festivo">
+            </div>
+            <div class="icon">
+                <img src="https://cdn-icons-png.flaticon.com/512/919/919852.png" alt="Python Navideño" title="Python de Navidad">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
