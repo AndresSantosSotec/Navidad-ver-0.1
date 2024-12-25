@@ -24,25 +24,26 @@
             animation: fadeIn 2s ease-in-out 1.5s forwards;
         }
         h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             margin: 0;
             background: linear-gradient(90deg, #f39c12, #f1c40f);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .message {
-            font-size: 1.5rem;
-            margin: 20px 0;
+            font-size: 1.2rem;
+            margin: 15px 0;
         }
         .icons {
             display: flex;
             justify-content: center;
-            margin-top: 40px;
-            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 20px;
         }
         .icon img {
-            width: 100px;
-            height: 100px;
+            width: 80px;
+            height: 80px;
             transition: transform 0.5s ease, box-shadow 0.5s ease;
         }
         .icon img:hover {
@@ -58,7 +59,7 @@
             position: absolute;
             top: -10px;
             color: white;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             user-select: none;
             pointer-events: none;
             animation: fall linear infinite;
@@ -66,6 +67,18 @@
         @keyframes fall {
             to {
                 transform: translateY(100vh);
+            }
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            .message {
+                font-size: 1rem;
+            }
+            .icon img {
+                width: 60px;
+                height: 60px;
             }
         }
     </style>
